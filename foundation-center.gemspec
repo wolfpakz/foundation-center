@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Foundation::Center::VERSION
   spec.authors       = ["Dan Porter"]
   spec.email         = ["wolfpakz@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A Ruby interface to the Foundation Center grant recipients API}
+  spec.summary       = %q{Provides a simple interface for fetching information about grant recipients and the grants they've received.}
+  spec.homepage      = "http://github.com/wolfpakz/foundation-center"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
