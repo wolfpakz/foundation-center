@@ -15,3 +15,10 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = 'random'
 end
+
+def fake_recipients_json
+  #
+  # Yanked this directly from Foundation Center's API
+  #
+  "\r\n\r\n[{\"recipient_ein\":10559608,\"recipient_name\":\"Allied Media Projects\",\"longitude\":-83.0522468,\"latitude\":42.4140992},{\"recipient_ein\":10885325,\"recipient_name\":\"Harriet Tubman Center for Recruitment and Development of Organizers\",\"longitude\":-83.0433412,\"latitude\":42.3345747},{\"recipient_ein\":20648595,\"recipient_name\":\"Michigan Avenue Business Association\",\"longitude\":-83.1306395,\"latitude\":42.3311259},{\"recipient_ein\":20701008,\"recipient_name\":\"'Sistahs Providing Intelligence, Creativity and Empowerment'\",\"longitude\":-83.0522468,\"latitude\":42.4140992},{\"recipient_ein\":20754855,\"recipient_name\":\"Detroit International Jazz Festival Foundation\",\"longitude\":-83.130645,\"latitude\":42.4685724},{\"recipient_ein\":20755116,\"recipient_name\":\"Belle Isle Womens Committee\",\"longitude\":-83.209149,\"latitude\":42.5462149},{\"recipient_ein\":30390058,\"recipient_name\":\"Ballet Renaissance\",\"longitude\":-83.0522468,\"latitude\":42.4140992}]"
+end
