@@ -1,8 +1,19 @@
-require 'foundation_center/client'
 require 'foundation_center/version'
 
 module FoundationCenter
-  def self.recipients
-    Client.get_recipients
+
+  URL = 'http://gisdev.foundationcenter.org/sustainArts/webServices'
+
+  class << self
+
+    def get_recipients
+      response = resource['getRecipients.php'].get
+      JSON.parse response
+    end
+
+    def resource
+      RestClient::Resource.new(URL)
+    end
+
   end
 end

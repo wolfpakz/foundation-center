@@ -7,11 +7,11 @@ describe 'Foundation Center' do
       # Fake the response json
       @fake_json = fake_recipients_json
 
-      FoundationCenter::Client.should_receive(:get_recipients) { JSON.parse @fake_json }
+      RestClient::Resource.any_instance.should_receive(:get) { @fake_json }
     end
 
     it 'returns an array' do
-      FoundationCenter.recipients.should be_kind_of(Array)
+      FoundationCenter.get_recipients.should be_kind_of(Array)
     end
 
     it 'returns a hash for every grant recipient' do
@@ -20,7 +20,7 @@ describe 'Foundation Center' do
       fakes.should be_kind_of(Array)
 
       # One for every recipient
-      recipients = FoundationCenter.recipients
+      recipients = FoundationCenter.get_recipients
       recipients.length.should == fakes.length
 
       # All of which are hashes
