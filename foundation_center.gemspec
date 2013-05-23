@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0.4"
   spec.add_development_dependency "rspec", "~> 2.13.0"
   spec.add_development_dependency "shoulda-matchers", "~> 2.1.0"
+  spec.add_development_dependency "faker", "~> 1.1.2"
 end

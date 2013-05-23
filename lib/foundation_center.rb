@@ -11,6 +11,11 @@ module FoundationCenter
       JSON.parse response
     end
 
+    def get_recipient_details(ein)
+      response = resource['getRecipientDetails.php'].get :params => {:ein => ein}
+      JSON.parse response
+    end
+
     def resource
       RestClient::Resource.new(URL)
     end
