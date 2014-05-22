@@ -6,8 +6,8 @@ module FoundationCenter
 
   class << self
 
-    def get_recipients
-      response = resource['getRecipients.php'].get
+    def get_recipients(state = nil)
+      response = state ? resource['getRecipients.php'].get :params => {:state => state} : resource['getRecipients.php'].get
       JSON.parse response
     end
 
